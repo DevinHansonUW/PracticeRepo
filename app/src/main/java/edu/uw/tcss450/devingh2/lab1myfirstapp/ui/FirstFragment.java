@@ -51,9 +51,12 @@ public class FirstFragment extends Fragment {
 
         Log.d("MESSAGE", message);
 
-        //Use the ID of the action to access it
+
+        FirstFragmentDirections.ActionFirstFragment2ToSecondFragment directions =
+                FirstFragmentDirections.actionFirstFragment2ToSecondFragment(message);
+
         Navigation.findNavController(getView())
-                .navigate(R.id.action_firstFragment2_to_secondFragment);
+                .navigate(directions);
 
     }
 
